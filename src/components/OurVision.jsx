@@ -1,0 +1,144 @@
+import React from "react";
+import { motion } from "framer-motion";
+import Tilt from "react-parallax-tilt";
+import { FaBrain, FaHeart, FaGlobe } from "react-icons/fa";
+
+const OurVision = () => {
+  const cards = [
+    {
+      icon: <FaBrain className="text-[#1826c2] text-3xl mb-3" />,
+      title: "Intelligent Wellness",
+      desc: "AI-driven insights that personalize mental & physical health experiences.",
+      gradient: "from-[#1e3c72] via-[#2a5298] to-[#34C759]",
+      glow: "hover:shadow-[#34C759]/40",
+      id: 1
+    },
+    {
+      icon: <FaHeart className="text-[#FF6B6B] text-3xl mb-3" />,
+      title: "Empathy in Tech",
+      desc: "Designing technology that heals, motivates, and connects — not overwhelms.",
+      gradient: "from-[#ff9a9e] via-[#fecfef] to-[#fecfef]",
+      glow: "hover:shadow-[#FF6B6B]/40",
+      id: 2
+    },
+    {
+      icon: <FaGlobe className="text-[#4ECDC4] text-3xl mb-3" />,
+      title: "Global Wellbeing",
+      desc: "Bridging communities across the world with a shared mission of wellness.",
+      gradient: "from-[#43e97b] via-[#38f9d7] to-[#4ECDC4]",
+      glow: "hover:shadow-[#4ECDC4]/40",
+      id: 3
+    },
+  ];
+
+  return (
+    <section className="bg-[#0A0A0A] font-[Poppins] text-white py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12">
+        
+        {/* GRID 1: VISION TEXT */}
+        <div className="grid grid-cols-1 lg:grid-cols-1 gap-12 mb-16">
+          <motion.div
+            className="text-center lg:text-left"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+             <motion.div
+                             className="mb-10"
+                             initial={{ opacity: 0, y: 20 }}
+                             whileInView={{ opacity: 1, y: 0 }}
+                             transition={{ duration: 0.6 }}
+                           >
+                             <div className="flex items-center gap-4 mb-2">
+                               <div className="w-12 h-[2px] bg-[#34C759]" />
+                               <h2 className="text-4xl md:text-5xl font-bold font-poppins bg-clip-text text-transparent bg-gradient-to-r from-[#34C759] to-[#f7f7f7]">
+                            Our Vision
+                               </h2>
+                             </div>
+                            
+                           </motion.div>
+            
+            <motion.p 
+              className="text-gray-300 text-base md:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0 mb-8"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.6 }}
+            >
+              To create a digital wellness ecosystem where technology empowers balance, 
+              community, and consciousness — blending innovation with human empathy. 
+              We believe in harnessing AI to deliver personalized wellness journeys, 
+              fostering global communities of support, and designing intuitive tools 
+              that prioritize mental health, emotional wellbeing, and sustainable habits.
+            </motion.p>
+
+            <motion.button
+              className="bg-[#34C759] hover:bg-[#2eb14f] text-black font-semibold px-8 py-3 rounded-full border-2 border-[#34C759] transition-all duration-300 flex items-center gap-2 mx-auto lg:mx-0"
+              whileHover={{ scale: 1.05, boxShadow: "0 10px 25px rgba(52, 199, 89, 0.4)" }}
+              whileTap={{ scale: 0.95 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5, duration: 0.6 }}
+            >
+              Learn More
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </motion.button>
+          </motion.div>
+        </div>
+
+        {/* GRID 2: 3 CARDS */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {cards.map((card, i) => (
+            <motion.div
+              key={card.id}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.1, duration: 0.6 }}
+              whileHover={{ y: -5 }}
+            >
+              <Tilt
+                glareEnable={true}
+                glareMaxOpacity={0.2}
+                glareColor={i === 0 ? "#34C759" : i === 1 ? "#FF6B6B" : "#4ECDC4"}
+                scale={1.02}
+                tiltMaxAngleX={12}
+                tiltMaxAngleY={12}
+                className="group rounded-2xl overflow-hidden bg-white/5 backdrop-blur-md border border-white/10 w-full h-auto p-5"
+              >
+                {/* Gradient Background */}
+                <div className={`bg-gradient-to-br ${card.gradient} opacity-20 group-hover:opacity-40 rounded-2xl -mx-5 -mt-5 mb-5 h-20`}></div>
+                
+                {/* Content - TOP TO BOTTOM */}
+                <div className="text-center">
+                  <motion.div className="mb-3" whileHover={{ scale: 1.05 }}>
+                    {card.icon}
+                  </motion.div>
+                  
+                  <motion.h3 className="text-xl font-bold mb-2 text-white" whileHover={{ scale: 1.02 }}>
+                    {card.title}
+                  </motion.h3>
+                  
+                  <motion.p className="text-gray-300 text-xs leading-relaxed" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ delay: 0.1 }}>
+                    {card.desc}
+                  </motion.p>
+                </div>
+
+          
+
+                {/* Glowing Border */}
+                <motion.div
+                  className={`absolute inset-0 rounded-2xl opacity-0 ${card.glow}`}
+                  whileHover={{ opacity: 1 }}
+                  transition={{ duration: 0.3 }}
+                />
+              </Tilt>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default OurVision;

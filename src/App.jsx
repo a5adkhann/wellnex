@@ -7,6 +7,7 @@ import FutureVision from './components/FutureVision'
 import Testimonials from './components/Testinomials'
 import Footer from './components/Footer'
 import "remixicon/fonts/remixicon.css";
+import OurVision from './components/OurVision'
 
 
 const App = () => {
@@ -14,7 +15,9 @@ const App = () => {
     <div>
       <Heroo/>
       <WhyWellnex/>
+      <OurVision/>
       <FlagshipApps/>
+      
       <FutureVision/>
       <Testimonials/>
       <Footer/>
