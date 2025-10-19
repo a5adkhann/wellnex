@@ -8,12 +8,14 @@ import Testimonials from './components/Testinomials'
 import Footer from './components/Footer'
 import "remixicon/fonts/remixicon.css";
 import OurVision from './components/OurVision'
+import Hero from './components/Hero'
 
 
 const App = () => {
   return (
     <div>
-      <Heroo/>
+      {/* <Heroo/> */}
+      <Hero/>
       <WhyWellnex/>
       <OurVision/>
       <FlagshipApps/>
