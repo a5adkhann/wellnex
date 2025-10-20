@@ -1,28 +1,27 @@
 import React from 'react'
 
-import Heroo from './components/Heroo'
-import WhyWellnex from './pages/WhyWellnex'
-import FlagshipApps from './components/FlagshipApps'
-import FutureVision from './components/FutureVision'
-import Testimonials from './components/Testinomials'
-import Footer from './components/Footer'
+
 import "remixicon/fonts/remixicon.css";
-import OurVision from './components/OurVision'
-import Hero from './components/Hero'
+
+import { BrowserRouter ,Route,Routes} from 'react-router-dom'
+import Home from './pages/Home';
+import AboutUs from './pages/AboutUs';
+import Contact from './pages/Contact';
+import OurApps from './pages/OurApps';
+
 
 
 const App = () => {
   return (
     <div>
-      {/* <Heroo/> */}
-      <Hero/>
-      <WhyWellnex/>
-      <OurVision/>
-      <FlagshipApps/>
-      
-      <FutureVision/>
-      <Testimonials/>
-      <Footer/>
+      <BrowserRouter>
+      <Routes>
+        <Route path='/' element={ <Home/> }></Route>
+        <Route path='/about' element={<AboutUs/>}></Route>
+         <Route path='/contact' element={<Contact/>}></Route>
+          <Route path='/apps' element={<OurApps/>}></Route>
+      </Routes>
+      </BrowserRouter>
 
       
     </div>

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -6,6 +7,12 @@ const Navbar = () => {
   const handlenav = () => {
     setNav(!nav);
   };
+  const navItems = [
+  { label: "Home", path: "/" },
+  { label: "Our Apps", path: "/apps" },
+  { label: "About", path: "/about" },
+  { label: "Contact", path: "/contact" },
+];
 
   return (
     <>
@@ -19,19 +26,17 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex gap-10 text-lg font-medium text-white">
-          {["Home", "Products", "About", "Services", "Contact"].map(
-            (item, index) => (
-              <li
-                key={index}
-                className="relative group cursor-pointer hover:text-[#34C759] transition-all"
-              >
-                {item}
-                <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#34C759] group-hover:w-full transition-all duration-300"></span>
-              </li>
-            )
-          )}
-        </ul>
+       <ul className="hidden md:flex gap-10 text-lg font-medium text-white">
+  {navItems.map((item, index) => (
+    <Link
+      to={item.path}
+      key={index}
+      className="relative group cursor-pointer hover:text-[#34C759] transition-all"
+    >
+      {item.label}
+    </Link>
+  ))}
+</ul>
 
         {/* Mobile Menu Icon */}
         <div className="md:hidden flex">
@@ -58,18 +63,17 @@ const Navbar = () => {
           ></i>
         </div>
 
-        <ul className="flex flex-col gap-6 p-8 text-lg font-medium text-white">
-          {["Home", "Products", "About", "Services", "Contact"].map(
-            (item, index) => (
-              <li
-                key={index}
-                className="hover:text-[#34C759] transition-all cursor-pointer"
-              >
-                {item}
-              </li>
-            )
-          )}
-        </ul>
+      <ul className="hidden md:flex gap-10 text-lg font-medium text-white">
+  {navItems.map((item, index) => (
+    <Link
+      to={item.path}
+      key={index}
+      className="relative group cursor-pointer hover:text-[#34C759] transition-all"
+    >
+      {item.label}
+    </Link>
+  ))}
+</ul>
 
         {/* CTA Button */}
         <div className="px-8 mt-8">

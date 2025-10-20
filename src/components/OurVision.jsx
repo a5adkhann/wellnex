@@ -34,40 +34,58 @@ const OurVision = () => {
   return (
     <section className="bg-[#0A0A0A] font-[Poppins] text-white py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12">
-        
-        {/* GRID 1: VISION TEXT */}
-        <div className="grid grid-cols-1 lg:grid-cols-1 gap-12 mb-16">
+
+        {/* GRID 1: VIDEO + VISION TEXT */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16 items-center">
+          
+          {/* LEFT: VIDEO */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            className="flex justify-center"
+          >
+            <video
+              src="w1.mp4" // <-- apna video yahan daalna (public/videos/vision.mp4)
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="rounded-2xl w-full max-w-lg shadow-lg border border-white/10"
+            />
+          </motion.div>
+
+          {/* RIGHT: TEXT */}
           <motion.div
             className="text-center lg:text-left"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-             <motion.div
-                             className="mb-10"
-                             initial={{ opacity: 0, y: 20 }}
-                             whileInView={{ opacity: 1, y: 0 }}
-                             transition={{ duration: 0.6 }}
-                           >
-                             <div className="flex items-center gap-4 mb-2">
-                               <div className="w-12 h-[2px] bg-[#34C759]" />
-                               <h2 className="text-4xl md:text-5xl font-bold font-poppins bg-clip-text text-transparent bg-gradient-to-r from-[#34C759] to-[#f7f7f7]">
-                            Our Vision
-                               </h2>
-                             </div>
-                            
-                           </motion.div>
-            
-            <motion.p 
+            <motion.div
+              className="mb-10"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <div className="flex items-center gap-4 mb-2 justify-center lg:justify-start">
+                <div className="w-12 h-[2px] bg-[#34C759]" />
+                <h2 className="text-4xl md:text-5xl font-bold font-poppins bg-clip-text text-transparent bg-gradient-to-r from-[#34C759] to-[#f7f7f7]">
+                  Our Vision
+                </h2>
+              </div>
+            </motion.div>
+
+            <motion.p
               className="text-gray-300 text-base md:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0 mb-8"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.6 }}
             >
-              To create a digital wellness ecosystem where technology empowers balance, 
-              community, and consciousness — blending innovation with human empathy. 
-              We believe in harnessing AI to deliver personalized wellness journeys, 
-              fostering global communities of support, and designing intuitive tools 
+              To create a digital wellness ecosystem where technology empowers balance,
+              community, and consciousness — blending innovation with human empathy.
+              We believe in harnessing AI to deliver personalized wellness journeys,
+              fostering global communities of support, and designing intuitive tools
               that prioritize mental health, emotional wellbeing, and sustainable habits.
             </motion.p>
 
@@ -104,29 +122,24 @@ const OurVision = () => {
                 scale={1.02}
                 tiltMaxAngleX={12}
                 tiltMaxAngleY={12}
-                className="group rounded-2xl overflow-hidden bg-white/5 backdrop-blur-md border border-white/10 w-full h-auto p-5"
+                className="group rounded-2xl overflow-hidden bg-white/5 backdrop-blur-md border border-white/10 w-full h-auto p-5 relative"
               >
-                {/* Gradient Background */}
                 <div className={`bg-gradient-to-br ${card.gradient} opacity-20 group-hover:opacity-40 rounded-2xl -mx-5 -mt-5 mb-5 h-20`}></div>
-                
-                {/* Content - TOP TO BOTTOM */}
+
                 <div className="text-center">
                   <motion.div className="mb-3" whileHover={{ scale: 1.05 }}>
                     {card.icon}
                   </motion.div>
-                  
+
                   <motion.h3 className="text-xl font-bold mb-2 text-white" whileHover={{ scale: 1.02 }}>
                     {card.title}
                   </motion.h3>
-                  
+
                   <motion.p className="text-gray-300 text-xs leading-relaxed" initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ delay: 0.1 }}>
                     {card.desc}
                   </motion.p>
                 </div>
 
-          
-
-                {/* Glowing Border */}
                 <motion.div
                   className={`absolute inset-0 rounded-2xl opacity-0 ${card.glow}`}
                   whileHover={{ opacity: 1 }}
