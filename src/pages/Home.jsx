@@ -6,11 +6,16 @@ import FlagshipApps from '../components/FlagshipApps'
 import FutureVision from '../components/FutureVision'
 import Testimonials from '../components/Testinomials'
 import Footer from '../components/Footer'
+import Hero from '../components/Hero'
+import ProgressBar from '../components/ProgressBar'
 
 const Home = () => {
   return (
     <>
+    <ProgressBar/>
       <Heroo/>
+     
+    
       <WhyWellnex/>
       <OurVision/>
       <FlagshipApps/>

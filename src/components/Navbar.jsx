@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
+
 const Navbar = () => {
   const [nav, setNav] = useState(false);
 
@@ -13,6 +14,7 @@ const Navbar = () => {
   { label: "About", path: "/about" },
   { label: "Contact", path: "/contact" },
 ];
+
 
   return (
     <>
@@ -37,6 +39,7 @@ const Navbar = () => {
     </Link>
   ))}
 </ul>
+
 
         {/* Mobile Menu Icon */}
         <div className="md:hidden flex">

@@ -1,52 +1,68 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import {   MdOutlineSelfImprovement, MdWatch } from 'react-icons/md';
-
-import { FaHeartbeat,FaRunning, } from "react-icons/fa";
-
-import { TypeAnimation } from 'react-type-animation';
-import Navbar from './Navbar';
+import React, { useState } from "react";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Hero = () => {
-  const textVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: 'easeOut' } },
-  };
-
-  const buttonVariants = {
-    hidden: { opacity: 0, scale: 0.9 },
-    visible: { opacity: 1, scale: 1, transition: { duration: 0.5, delay: 0.5, type: 'spring', stiffness: 100 } },
-    hover: { scale: 1.05, boxShadow: '0 0 15px rgba(52, 199, 89, 0.5)', transition: { duration: 0.2 } },
-  };
-
-  const iconVariants = {
-    hidden: { opacity: 0, scale: 0.8, rotate: -15 },
-    visible: { opacity: 1, scale: 1, rotate: 0, transition: { duration: 0.8, delay: 0.7 } },
-  };
-
-  
+ 
 
   return (
-   <div className="relative h-screen w-full overflow-hidden">
-  {/* Video background */}
-  <video
-    src="w1.mp4"
-    autoPlay
-    muted
-    loop
-    playsInline
-    className="absolute inset-0 w-full h-full object-cover"
-  />
+    <section className="relative flex flex-col md:flex-row items-center justify-center overflow-hidden ">
 
-  {/* Overlay (optional, halka dark effect dene ke liye) */}
-  <div className="absolute inset-0 bg-black/30"></div>
+      {/* ✨ Floating particles */}
+      {[...Array(20)].map((_, i) => (
+        <motion.span
+          key={i}
+          className="absolute w-2 h-2  bg-green-400/20 rounded-full blur-[2px]"
+          style={{
+            top: `${Math.random() * 100}%`,
+            left: `${Math.random() * 100}%`,
+          }}
+          animate={{
+            y: [0, -30, 0],
+            x: [0, 10, -10, 0],
+            opacity: [0.3, 0.8, 0.3],
+            scale: [1, 1.2, 1],
+          }}
+          transition={{
+            duration: 6 + Math.random() * 6,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        />
+      ))}
 
-  {/* Navbar on top of video */}
-  <div className="relative z-10">
-    <Navbar />
-  </div>
-</div>
-
+      {/* 🌀 Circle animation */}
+      <motion.div className="flex-1 flex justify-center relative z-10">
+        <motion.div
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        
+          transition={{ duration: 0.8, }}
+          className="relative w-[500px] h-[500px] rounded-full   overflow-hidden cursor-pointer"
+        >
+          <AnimatePresence mode="wait">
+           
+              <motion.div
+                key="rabbit"
+                className="absolute inset-0 flex justify-center items-center"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.6 }}
+              >
+                <DotLottieReact
+                  src="https://lottie.host/621877b8-483c-4a67-a546-fd91ccdb9178/uaDzo5rpJb.lottie"
+                  loop
+                  autoplay
+                  style={{ width: "150%", height: "125%" }}
+                />
+              </motion.div>
+       
+             
+          </AnimatePresence>
+        </motion.div>
+      </motion.div>
+    </section>
   );
 };
 

@@ -4,6 +4,7 @@ import { Parallax } from "react-scroll-parallax";
 import { FaBrain, FaHeart, FaGlobe } from "react-icons/fa";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import Hero from "../components/Hero";
 
 
 const AboutUs = () => {
@@ -65,32 +66,53 @@ const AboutUs = () => {
         </Parallax>
       </section>
 
+
       {/* OUR STORY */}
-      <section className="bg-[#111827] py-24 px-6 md:px-20">
-        <motion.h2
-          className="text-4xl font-bold mb-10 text-white"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          Our Journey
-        </motion.h2>
-        <div className="max-w-4xl space-y-8 text-gray-400">
-          <p>
-            Founded in 2023, Wellnex Systems began as a small vision — to merge
-            the power of artificial intelligence with emotional intelligence.
-          </p>
-          <p>
-            Over time, we grew into a team of passionate creators, developers,
-            and wellness advocates building products like SoulWhispers and
-            GymKey to inspire smarter living.
-          </p>
-          <p>
-            Our path is just beginning. With every innovation, we aim to bring
-            balance back to a fast-paced digital world.
-          </p>
-        </div>
-      </section>
+<section className="bg-[#111827] py-24 px-6 md:px-20">
+  
+  <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+    
+    <motion.div
+      className="space-y-8 text-gray-400"
+      initial={{ opacity: 0, x: 50 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.6 }}
+    >
+      <motion.h2
+    className="text-4xl font-bold mb-10 text-white"
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6 }}
+  >
+    Our Journey
+  </motion.h2>
+      <p>
+        Founded in 2023, Wellnex Systems began as a small vision — to merge
+        the power of artificial intelligence with emotional intelligence.
+      </p>
+      <p>
+        Over time, we grew into a team of passionate creators, developers,
+        and wellness advocates building products like SoulWhispers and
+        GymKey to inspire smarter living.
+      </p>
+      <p>
+        Our path is just beginning. With every innovation, we aim to bring
+        balance back to a fast-paced digital world.
+      </p>
+    </motion.div>
+    {/* 🌀 Left side: Hero Component */}
+    <div className="flex justify-center">
+      
+        {/* Import Hero and render here */}
+        <Hero/>
+      
+    </div>
+
+    {/* 🧠 Right side: Journey text */}
+    
+  </div>
+</section>
+
 
       {/* CORE VALUES */}
       <section className="py-24 px-6 md:px-20 bg-gradient-to-r from-[#10141c] to-[#0b0d13]">

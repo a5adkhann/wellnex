@@ -3,3 +3,31 @@
 *{
      font-family: "Poppins", sans-serif;
 }
+/* Light Theme */
+.light-theme {
+  background-color: #f5f5f5;
+  color: #222;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Dark Theme */
+.dark-theme {
+  background-color: #0f172a;
+  color: #f5f5f5;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Example button styling */
+.theme-btn {
+  padding: 8px 16px;
+  border-radius: 8px;
+  background: #16a34a;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.theme-btn:hover {
+  opacity: 0.8;
+}
