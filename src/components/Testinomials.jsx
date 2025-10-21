@@ -34,8 +34,14 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <section className="bg-gradient-to-b from-[#0A0A0A] to-[#0F1A10] text-white py-24 px-6 md:px-16 lg:px-28">
-      <div className="max-w-7xl mx-auto">
+    <section className=" bg-black text-white py-24 px-6 md:px-16 lg:px-28"
+    
+     style={{
+        backgroundImage: `linear-gradient(rgba(0, 100, 0, 0.3), rgba(0, 0, 0, 0.3)), url('line-vector.svg')`,
+      }}>
+      <div className="max-w-7xl mx-auto"
+      
+      >
         {/* Left-aligned heading */}
         <motion.div
           className="mb-14"

@@ -146,7 +146,7 @@ const OurApps = () => {
         ))}
       </div>
 
-      <Footer />
+   
     </div>
   );
 };

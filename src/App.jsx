@@ -4,6 +4,8 @@ import React from 'react'
 import "remixicon/fonts/remixicon.css";
 
 import { BrowserRouter ,Route,Routes} from 'react-router-dom'
+import { ParallaxProvider } from 'react-scroll-parallax';
+
 import Home from './pages/Home';
 import AboutUs from './pages/AboutUs';
 import Contact from './pages/Contact';
@@ -14,8 +16,10 @@ import Footer from './components/Footer';
 
 
 const App = () => {
+  
   return (
     <div>
+       <ParallaxProvider>
       <BrowserRouter>
       <Navbar/>
       <Routes>
@@ -26,7 +30,7 @@ const App = () => {
       </Routes>
       <Footer/>
       </BrowserRouter>
-
+</ParallaxProvider>
       
     </div>
   )

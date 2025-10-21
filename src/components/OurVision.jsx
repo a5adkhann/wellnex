@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import Tilt from "react-parallax-tilt";
 import { FaBrain, FaHeart, FaGlobe } from "react-icons/fa";
 
+
 const OurVision = () => {
   const cards = [
     {
@@ -32,7 +33,15 @@ const OurVision = () => {
   ];
 
   return (
-    <section className="bg-[#0A0A0A] font-[Poppins] text-white py-14 sm:py-16 lg:py-24">
+     
+    <section className="bg-[#0A0A0A] font-[Poppins] text-white py-14 sm:py-16 lg:py-24  bg-no-repeat 
+  bg-cover 
+  bg-center  "
+  
+  style={{
+        backgroundImage: `linear-gradient(rgba(0, 100, 0, 0.3), rgba(0, 0, 0, 0.3)), url('line-vector.svg')`,
+      }}
+  >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 lg:px-12">
 
         {/* GRID 1: VIDEO + TEXT */}
@@ -165,6 +174,7 @@ const OurVision = () => {
         </div>
       </div>
     </section>
+  
   );
 };
 
