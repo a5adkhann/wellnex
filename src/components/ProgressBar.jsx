@@ -6,7 +6,7 @@ const ProgressBar = () => {
 
   return (
     <motion.div
-      className="fixed top-0 right-0 w-full h-1 bg-green-600 origin-right z-50 backdrop-blur-sm"
+      className="fixed top-0 right-0 w-full h-1 bg-green-600 origin-left z-50 backdrop-blur-sm"
       style={{ scaleX: scrollYProgress }}
     >
       <motion.div

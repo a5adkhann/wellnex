@@ -11,8 +11,7 @@ const AboutUs = () => {
   return (
     <div className="font-[Poppins] text-gray-100 bg-gradient-to-b from-[#0b0d13] via-[#111827] to-[#0b0d13] overflow-hidden">
 
-      {/* NAVBAR */}
-      <Navbar/>
+      
 
       {/* HERO / INTRO */}
       <section className="relative py-28 px-6 md:px-20 text-left border-b border-[#1b2e1b] ">

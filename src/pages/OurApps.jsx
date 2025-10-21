@@ -54,7 +54,7 @@ const apps = [
 const OurApps = () => {
   return (
     <div className="bg-gradient-to-b from-[#0a0f0a] via-[#0d0f0d] to-[#000] text-gray-200 min-h-screen font-[Poppins]">
-      <Navbar />
+
 
       {/* Header */}<section className="text-start py-16 ps-36 border-b border-[#1b2e1b] ">
       

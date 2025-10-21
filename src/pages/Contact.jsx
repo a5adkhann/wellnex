@@ -7,8 +7,7 @@ import Footer from "../components/Footer";
 const Contact = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#030d0a] via-[#07140e] to-[#0d2018] text-white flex flex-col">
-      {/* Navbar */}
-      <Navbar/>
+     
 
       {/* Header Section */}
       <section className="px-8 md:px-20 py-16 text-left border-b border-[#1b2e1b] ">
