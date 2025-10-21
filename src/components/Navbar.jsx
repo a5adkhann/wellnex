@@ -83,7 +83,7 @@ const Navbar = ({ activePage }) => {
 
         {/* 🌈 Links */}
         <div className="hidden md:flex items-center space-x-10">
-          {["Home", "SoulWhispers", "GymKey", "Contact"].map((name) => (
+          {["Home", "Apps", "About", "Contact"].map((name) => (
             <Link
               key={name}
               to={`/${name === "Home" ? "" : name.toLowerCase()}`}
@@ -106,7 +106,7 @@ const Navbar = ({ activePage }) => {
         >
           <Link
             to="/contact"
-            className="bg-green-500 hover:bg-green-600 text-white font-semibold px-5 py-2 rounded-full transition-all duration-300 shadow-md"
+            className="md:flex hidden  bg-green-500 hover:bg-green-600 text-white font-semibold px-5 py-2 rounded-full transition-all duration-300 shadow-md"
           >
             Join Now
           </Link>
@@ -124,7 +124,7 @@ const Navbar = ({ activePage }) => {
             className="md:hidden absolute top-full left-0 w-full bg-white/90 backdrop-blur-lg border-t border-gray-200 z-10"
           >
             <div className="px-4 py-4 space-y-4">
-              {["Home", "SoulWhispers", "GymKey", "Contact"].map((name) => (
+              {["Home", "Our Apps", "About", "Contact"].map((name) => (
                 <Link
                   key={name}
                   to={`/${name === "Home" ? "" : name.toLowerCase()}`}

@@ -1,6 +1,6 @@
 import React from 'react'
 import Heroo from '../components/Heroo'
-import WhyWellnex from './WhyWellnex'
+import WhyWellnex from '../components/WhyWellnex'
 import OurVision from '../components/OurVision'
 import FlagshipApps from '../components/FlagshipApps'
 import FutureVision from '../components/FutureVision'
@@ -21,7 +21,7 @@ const Home = () => {
       <FlagshipApps/>
       <FutureVision/>
       <Testimonials/>
-      <Footer/>
+   
     </>
   )
 }

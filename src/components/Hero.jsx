@@ -34,8 +34,7 @@ const Hero = () => {
       {/* 🌀 Circle animation */}
       <motion.div className="flex-1 flex justify-center relative z-10">
         <motion.div
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
+        
         
           transition={{ duration: 0.8, }}
           className="relative w-[500px] h-[500px] rounded-full   overflow-hidden cursor-pointer"

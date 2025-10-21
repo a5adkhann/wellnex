@@ -15,36 +15,26 @@ const Heroo = () => {
       }}
     >
     
-        <Navbar />
-    
 
       {/* Hero Content */}
-      <div className="flex items-center justify-center min-h-screen px-6 md:px-12 lg:px-20">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 items-center gap-10">
-          
+      <div className="flex items-center justify-center min-h-screen px-5 sm:px-8 md:px-12 lg:px-20 py-10 md:py-0">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-10 md:gap-16">
           {/* Left Side */}
-          <div className="text-center md:text-left space-y-6">
+          <div className="text-center md:text-left space-y-5 sm:space-y-6">
             {/* Headline */}
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold font-poppins leading-tight bg-clip-text text-transparent bg-gradient-to-r from-white via-[#D4F4E2] to-[#34C759] drop-shadow-lg">
+            <h1 className="text-5xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-poppins leading-tight bg-clip-text text-transparent bg-gradient-to-r from-white via-[#D4F4E2] to-[#34C759] drop-shadow-lg">
               Wellnex Systems
             </h1>
 
             {/* Animated Text */}
             <motion.div
-              className="text-2xl sm:text-3xl text-[#E6F0FA]/90 font-light font-inter"
+              className="text-2xl sm:text-2xl md:text-3xl text-[#E6F0FA]/90 font-light font-inter"
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
               <TypeAnimation
-                sequence={[
-                  'Wellness.',
-                  1000,
-                  'Technology.',
-                  1000,
-                  'Community.',
-                  1000,
-                ]}
+                sequence={['Wellness.', 1000, 'Technology.', 1000, 'Community.', 1000]}
                 wrapper="span"
                 repeat={Infinity}
                 speed={45}
@@ -53,7 +43,7 @@ const Heroo = () => {
 
             {/* Description */}
             <motion.p
-              className="text-base sm:text-lg text-gray-100/90 max-w-2xl mx-auto md:mx-0 leading-relaxed tracking-wide font-inter"
+              className="text-lg sm:text-base md:text-lg text-gray-100/90 max-w-2xl mx-auto md:mx-0 leading-relaxed tracking-wide font-inter"
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -65,7 +55,7 @@ const Heroo = () => {
 
             {/* Badge */}
             <motion.div
-              className="inline-block bg-[#34C759] text-white px-5 py-2 rounded-full text-sm font-semibold font-inter shadow-lg"
+              className="inline-block bg-[#34C759] text-white px-5 py-2 rounded-full text-sm sm:text-sm md:text-base font-semibold font-inter shadow-lg"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ delay: 0.2 }}
@@ -74,16 +64,16 @@ const Heroo = () => {
             </motion.div>
 
             {/* Buttons */}
-            <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4 pt-6">
+            <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4 pt-4 sm:pt-6">
               <a
                 href="#join"
-                className="bg-gradient-to-r from-[#34C759] to-[#2ca44e] text-white px-8 py-3 rounded-full font-semibold text-base font-poppins shadow-md hover:shadow-xl hover:scale-105 transition-all duration-200"
+                className="bg-gradient-to-r from-[#34C759] to-[#2ca44e] text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-full font-semibold text-sm sm:text-base font-poppins shadow-md hover:shadow-xl hover:scale-105 transition-all duration-200"
               >
                 Join the Movement
               </a>
               <a
                 href="#apps"
-                className="border-2 border-[#D4F4E2] text-[#D4F4E2] px-8 py-3 rounded-full font-semibold text-base font-poppins hover:bg-[#D4F4E2] hover:text-[#007BFF] hover:shadow-xl transition-all duration-200"
+                className="border-2 border-[#D4F4E2] text-[#D4F4E2] px-6 sm:px-8 py-2.5 sm:py-3 rounded-full font-semibold text-sm sm:text-base font-poppins hover:bg-[#D4F4E2] hover:text-[#007BFF] hover:shadow-xl transition-all duration-200"
               >
                 Explore Our Apps
               </a>
@@ -92,14 +82,14 @@ const Heroo = () => {
 
           {/* Right Side Icons */}
           <div className="hidden md:flex justify-center items-center relative">
-            <div className="relative flex justify-center items-center w-[320px] h-[320px]">
+            <div className="relative flex justify-center items-center w-[260px] sm:w-[300px] md:w-[320px] h-[260px] sm:h-[300px] md:h-[320px]">
               <motion.div
                 className="absolute text-[#34C759]"
                 animate={{ y: [0, 10, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
                 style={{ top: '-40px', left: '0px' }}
               >
-                <FaHeartbeat className="text-5xl" />
+                <FaHeartbeat className="text-4xl sm:text-5xl" />
               </motion.div>
 
               <motion.div
@@ -108,7 +98,7 @@ const Heroo = () => {
                 transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
                 style={{ top: '20px', right: '0px' }}
               >
-                <FaRunning className="text-4xl" />
+                <FaRunning className="text-3xl sm:text-4xl" />
               </motion.div>
 
               <motion.div
@@ -117,7 +107,7 @@ const Heroo = () => {
                 transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
                 style={{ bottom: '-30px', left: '0px' }}
               >
-                <GiWeightLiftingUp className="text-6xl" />
+                <GiWeightLiftingUp className="text-5xl sm:text-6xl" />
               </motion.div>
 
               <motion.div
@@ -126,10 +116,10 @@ const Heroo = () => {
                 transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
                 style={{ bottom: '10px', right: '0px' }}
               >
-                <MdWatch className="text-3xl" />
+                <MdWatch className="text-2xl sm:text-3xl" />
               </motion.div>
 
-              <MdOutlineSelfImprovement className="text-[300px] text-[#D4F4E2]/70" />
+              <MdOutlineSelfImprovement className="text-[220px] sm:text-[260px] md:text-[300px] text-[#D4F4E2]/70" />
             </div>
           </div>
         </div>

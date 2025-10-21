@@ -55,25 +55,22 @@ const OurApps = () => {
   return (
     <div className="bg-gradient-to-b from-[#0a0f0a] via-[#0d0f0d] to-[#000] text-gray-200 min-h-screen font-[Poppins]">
 
-
-      {/* Header */}<section className="text-start py-16 ps-36 border-b border-[#1b2e1b] ">
-      
+ <section className="relative py-28 px-6 md:px-20 text-left border-b border-[#1b2e1b] ">
         <motion.h1
-          initial={{ y: -40, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.6 }}
-          className="text-4xl md:text-5xl font-bold text-[#34C759] mb-4"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-5xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#34C759] to-[#f8faf9] mb-5"
         >
           Our Flagship Mobile Apps
         </motion.h1>
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.4 }}
-          className="text-lg text-gray-400 max-w-3xl"
+          transition={{ delay: 0.3, duration: 0.8 }}
+          className="max-w-2xl text-lg md:text-xl text-gray-400"
         >
-          Built with care, innovation, and intelligence — each app by Wellnex Systems redefines how
-          technology connects with human wellness.
+         Built with care, innovation, and intelligence — each app by Wellnex Systems redefines how technology connects with human wellness.
         </motion.p>
       </section>
 

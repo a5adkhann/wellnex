@@ -6,7 +6,7 @@ import Footer from "../components/Footer";
 
 const Contact = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#030d0a] via-[#07140e] to-[#0d2018] text-white flex flex-col">
+    <div className="min-h-screen pt-10 bg-gradient-to-b from-[#030d0a] via-[#07140e] to-[#0d2018] text-white flex flex-col">
      
 
       {/* Header Section */}
@@ -15,7 +15,7 @@ const Contact = () => {
           initial={{ y: 40, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1 }}
-          className="text-4xl md:text-5xl font-bold text-green-400 mb-4"
+          className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#34C759] to-[#f8faf9] mb-4"
         >
           Get in Touch
         </motion.h2>
@@ -118,7 +118,7 @@ const Contact = () => {
         </motion.div>
       </div>
 
-      <Footer/>
+   
     </div>
   );
 };
