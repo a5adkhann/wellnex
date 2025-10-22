@@ -1,124 +1,125 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 
 const Contact = () => {
   return (
-    <div className="min-h-screen pt-10 bg-gradient-to-b from-[#030d0a] via-[#07140e] to-[#0d2018] text-white flex flex-col">
-     
-
-      {/* Header Section */}
-      <section className="px-8 md:px-20 py-16 text-left border-b border-[#1b2e1b] ">
-        <motion.h2
+    <div className="font-[Poppins] text-black bg-black">
+   <section className="px-8 md:px-20 pt-28 pb-16 text-left">
+        <motion.h1
           initial={{ y: 40, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1 }}
-          className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#34C759] to-[#f8faf9] mb-4"
+          className="text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-[#00FF85] via-[#38ef7d] to-[#00c38b] text-transparent bg-clip-text drop-shadow-[0_0_20px_rgba(56,239,125,0.5)]"
         >
-          Get in Touch
-        </motion.h2>
-
+          Get in Touch with <br /> <span className="text-white/90">Wellnex Systems</span>
+        </motion.h1>
         <motion.p
-          initial={{ y: 40, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 1, delay: 0.2 }}
-          className="text-gray-400 max-w-2xl leading-relaxed"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.3, duration: 1 }}
+          className="text-gray-400 max-w-2xl mt-6 text-lg leading-relaxed"
         >
-          Whether you have a question, a suggestion, or you just want to say hello — 
-          our team at <span className="text-green-400">Wellnex Systems</span> is always ready to connect.
-          Let’s make something meaningful together.
+          Let’s build something extraordinary. Whether you’re a business visionary, a creator, or an innovator — we’d love to connect and collaborate.
         </motion.p>
       </section>
 
-      {/* Contact Section */}
-      <div className="flex-1 px-8 md:px-20 pb-20 grid md:grid-cols-2 gap-14 mt-10">
-        {/* Left Side */}
-        <motion.div
-          initial={{ x: -60, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 1 }}
-          className="space-y-8"
-        >
-          <div className="flex items-start gap-4">
-            <div className="p-4 bg-green-500/10 rounded-2xl shadow-lg border border-green-400/20">
-              <FaMapMarkerAlt className="text-green-400 text-xl" />
-            </div>
-            <div>
-              <h4 className="font-semibold text-lg">Office</h4>
-              <p className="text-gray-400">Tech Park, Karachi, Pakistan</p>
-            </div>
-          </div>
+      {/* === GRID SECTION === */}
+      <section className="grid grid-cols-1 md:grid-cols-[40%_60%] min-h-[80vh]">
+        {/* LEFT SIDE: LET'S CONNECT SECTION */}
+        <div className="bg-black text-white flex flex-col justify-center p-10 md:p-16 border-t-2 border-green-600">
+          <h2 className="text-3xl font-bold mb-6">Let’s Connect</h2>
+          <p className="text-gray-400 mb-8 leading-relaxed">
+            Fill out the form and we’ll get back to you shortly.
+          </p>
 
-          <div className="flex items-start gap-4">
-            <div className="p-4 bg-green-500/10 rounded-2xl shadow-lg border border-green-400/20">
-              <FaEnvelope className="text-green-400 text-xl" />
-            </div>
-            <div>
-              <h4 className="font-semibold text-lg">Email</h4>
-              <p className="text-gray-400">support@wellnex.com</p>
-            </div>
-          </div>
+          <h3 className="text-lg font-semibold mb-4">What happens next?</h3>
+          <ul className="space-y-4 text-gray-300 text-sm">
+            <li className="flex items-start gap-3">
+              <span className="text-[#34C759] mt-1">✔</span>
+              <span>Our expert will review your request and contact you.</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="text-[#34C759] mt-1">✔</span>
+              <span>If needed, we’ll sign an NDA to ensure your privacy.</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="text-[#34C759] mt-1">✔</span>
+              <span>Our Pre-Sales Manager will send you a proposal.</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="text-[#34C759] mt-1">✔</span>
+              <span>Then we start working on your project together.</span>
+            </li>
+          </ul>
+        </div>
 
-          <div className="flex items-start gap-4">
-            <div className="p-4 bg-green-500/10 rounded-2xl shadow-lg border border-green-400/20">
-              <FaPhoneAlt className="text-green-400 text-xl" />
-            </div>
-            <div>
-              <h4 className="font-semibold text-lg">Phone</h4>
-              <p className="text-gray-400">+92 311 4567890</p>
-            </div>
-          </div>
-        </motion.div>
-
-        {/* Right Side - Form */}
-        <motion.div
-          initial={{ x: 60, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 1 }}
-          className="bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/10 shadow-lg"
-        >
-          <h3 className="text-2xl font-semibold mb-6 text-green-400">Send us a Message</h3>
-          <form className="space-y-6">
-            <div>
-              <label className="block text-gray-400 mb-2">Name</label>
+        {/* RIGHT SIDE: CONTACT FORM SECTION */}
+        <div className="bg-black border-t-2 border-l-2  border-green-600 flex justify-center items-center p-10 md:p-20">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="  w-full max-w-3xl p-8 md:p-12"
+          >
+            <h2 className="text-3xl font-bold mb-8 text-center text-[#34C759]">
+              Contact Us
+            </h2>
+            <form className="space-y-6">
               <input
                 type="text"
-                placeholder="Enter your name"
-                className="w-full p-3 bg-white/5 border border-gray-700 rounded-xl focus:ring-2 focus:ring-green-400 outline-none"
+                placeholder="Your challenge / goal*"
+                className="w-full px-4 py-3 rounded-xl text-white border border-green-500  focus:ring-2 focus:ring-[#34C759] outline-none"
               />
-            </div>
 
-            <div>
-              <label className="block text-gray-400 mb-2">Email</label>
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="w-full p-3 bg-white/5 border border-gray-700 rounded-xl focus:ring-2 focus:ring-green-400 outline-none"
-              />
-            </div>
+              <div className="grid md:grid-cols-2 gap-6">
+                <input
+                  type="text"
+                  placeholder="Name*"
+                  className="w-full px-4 py-3 rounded-xl text-white border border-green-500  focus:ring-2 focus:ring-[#34C759] outline-none"
+                />
+                <input
+                  type="email"
+                  placeholder="Corporate email*"
+                  className="w-full px-4 py-3 rounded-xl text-white border border-green-500  focus:ring-2 focus:ring-[#34C759] outline-none"
+                />
+              </div>
 
-            <div>
-              <label className="block text-gray-400 mb-2">Message</label>
+              <div className="grid md:grid-cols-2 gap-6">
+                <input
+                  type="text"
+                  placeholder="Phone number"
+                  className="w-full px-4 py-3 rounded-xl text-white border border-green-500 focus:ring-2 focus:ring-[#34C759] outline-none"
+                />
+                <input
+                  type="text"
+                  placeholder="Company"
+                  className="w-full px-4 py-3 rounded-xl text-white border border-green-500 focus:ring-2 focus:ring-[#34C759] outline-none"
+                />
+              </div>
+
+              <div className="flex items-center gap-3 text-sm text-white">
+                <input type="checkbox" className="accent-[#34C759]" />
+                <span>Secure data with NDA first</span>
+              </div>
+
               <textarea
+                placeholder="Your Message"
                 rows="5"
-                placeholder="Write your message..."
-                className="w-full p-3 bg-white/5 border border-gray-700 rounded-xl focus:ring-2 focus:ring-green-400 outline-none"
+                className="w-full px-4 py-3 rounded-xl text-white border border-green-500 focus:ring-2 focus:ring-[#34C759] outline-none resize-none"
               ></textarea>
-            </div>
 
-            <button
-              type="submit"
-              className="w-full py-3 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg"
-            >
-              Send Message
-            </button>
-          </form>
-        </motion.div>
-      </div>
-
-   
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="w-full bg-[#34C759] hover:bg-[#28a745] text-white py-3 rounded-xl font-semibold text-lg transition-all duration-300 shadow-md"
+              >
+                Send Message
+              </motion.button>
+            </form>
+          </motion.div>
+        </div>
+      </section>
     </div>
   );
 };

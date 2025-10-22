@@ -22,13 +22,11 @@ const Heroo = () => {
           {/* Left Side */}
           <div className="text-center md:text-left space-y-5 sm:space-y-6">
             {/* Headline */}
-            <h1 className="text-5xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-poppins leading-tight bg-clip-text text-transparent bg-gradient-to-r from-white via-[#D4F4E2] to-[#34C759] drop-shadow-lg">
-              Wellnex Systems
-            </h1>
+           
 
             {/* Animated Text */}
             <motion.div
-              className="text-2xl sm:text-2xl md:text-3xl text-[#E6F0FA]/90 font-light font-inter"
+              className="text-2xl sm:text-2xl md:text-6xl  text-[#E6F0FA]/90 font-bold font-inter"
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}

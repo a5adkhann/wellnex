@@ -53,7 +53,9 @@ const apps = [
 
 const OurApps = () => {
   return (
-    <div className="bg-gradient-to-b from-[#0a0f0a] via-[#0d0f0d] to-[#000] text-gray-200 min-h-screen font-[Poppins]">
+    <div className="bg-black text-gray-200 min-h-screen font-[Poppins]"
+    
+    >
 
  <section className="relative py-28 px-6 md:px-20 text-left border-b border-[#1b2e1b] ">
         <motion.h1

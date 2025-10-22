@@ -76,7 +76,7 @@ const FlagshipApps = () => {
                 <img
                   src={app.image}
                   alt={app.name}
-                  className="rounded-2xl w-full h-auto object-cover shadow-lg"
+                  className="rounded-2xl w-full h-auto object-cover "
                 />
               </div>
             </motion.div>

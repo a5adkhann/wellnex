@@ -18,22 +18,28 @@ const Home = () => {
       <Heroo/>
      
     
-        <div style={{ position: 'relative', minHeight: '100vh' }}>
-        {/* Sticky WhyWellnex */}
+         <div style={{ position: 'relative', minHeight: '100vh' }}>
+      
         <div style={{ position: 'sticky', top: 0, zIndex: 10 }}>
           <WhyWellnex />
         </div>
 
-        {/* OurVision scrolls over WhyWellnex */}
+      
         <div style={{ position: 'relative', marginTop: '-1vh', zIndex: 20 }}>
           <OurVision />
         </div>
-      </div>
+      </div> 
          
 
       <FlagshipApps/>
-      <FutureVision/>
-      <Testimonials/>
+         <FutureVision/>
+        <Testimonials/>
+      
+       
+       
+       
+      
+      
    
     </>
   )

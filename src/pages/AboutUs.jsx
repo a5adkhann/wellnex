@@ -9,7 +9,9 @@ const AboutUs = () => {
     <div className="font-[Poppins] text-gray-100 bg-gradient-to-b from-[#0b0d13] via-[#111827] to-[#0b0d13] overflow-hidden">
 
       {/* HERO / INTRO */}
-      <section className="relative py-20 sm:py-24 md:py-28 px-4 sm:px-8 md:px-16 lg:px-20 text-left border-b border-[#1b2e1b]">
+      <section className="relative py-20 sm:py-24 md:py-28 px-4 sm:px-8 md:px-16 lg:px-20 text-left border-b border-[#1b2e1b]"
+      
+      >
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -31,7 +33,9 @@ const AboutUs = () => {
       </section>
 
       {/* MISSION & VISION */}
-      <section className="grid md:grid-cols-2 gap-8 sm:gap-10 max-w-6xl mx-auto px-4 sm:px-8 md:px-12 lg:px-20 py-20 sm:py-24">
+      <section className="grid md:grid-cols-2 gap-8 sm:gap-10 max-w-6xl mx-auto px-4 sm:px-8 md:px-12 lg:px-20 py-20 sm:py-24"
+      
+      >
         <Parallax speed={-5}>
           <motion.div
             whileHover={{ scale: 1.03 }}

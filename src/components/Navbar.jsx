@@ -74,11 +74,11 @@ const Navbar = ({ activePage }) => {
           className="flex items-center space-x-2"
         >
           <img
-            src="/logo.png"
+            src="white-logo.png"
             alt="Logo"
-            className="w-8 h-8 rounded-full object-cover border border-white/40 shadow-md"
+            className="w-30 h-12  object-cover  "
           />
-          <span className="text-lg font-semibold text-white">MyBrand</span>
+        
         </motion.div>
 
         {/* 🌈 Links */}

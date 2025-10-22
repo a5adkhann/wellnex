@@ -3,7 +3,9 @@ import { FaChartLine, FaAppleAlt, FaWatchmanMonitoring } from "react-icons/fa";
 
 const FutureVision = () => {
   return (
-    <section className="bg-gradient-to-b from-[#f9fafb] to-white py-16 md:py-20 px-6 sm:px-10">
+    <section className="bg-gradient-to-b from-[#f9fafb] to-white py-16 md:py-20 px-6 sm:px-10"
+    
+    >
       <div className="max-w-6xl mx-auto flex flex-col text-center items-center">
         {/* Heading */}
         <div className="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-4 mb-6 md:mb-8">
