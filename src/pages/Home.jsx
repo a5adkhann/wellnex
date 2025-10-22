@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import Heroo from '../components/Heroo'
 import WhyWellnex from '../components/WhyWellnex'
@@ -8,9 +8,12 @@ import FutureVision from '../components/FutureVision'
 import Testimonials from '../components/Testinomials'
 
 import ProgressBar from '../components/ProgressBar'
-import { Parallax } from 'react-scroll-parallax';
 
 const Home = () => {
+
+  useEffect(() => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }, []);
   
   return (
     <>
