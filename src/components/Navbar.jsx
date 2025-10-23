@@ -47,7 +47,6 @@ const Navbar = ({ activePage }) => {
         }}
         className="mx-auto flex items-center justify-center md:justify-between px-6 py-4 rounded-full mt-2 transition-all duration-300"
       >
-        {/* 📱 Mobile Button */}
         <div className="md:hidden absolute left-6">
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -69,26 +68,27 @@ const Navbar = ({ activePage }) => {
           </button>
         </div>
 
-        {/* 🌟 Logo */}
         <motion.div
           animate={{ scale: isScrolled ? 0.9 : 1 }}
           transition={{ duration: 0.3, ease: "easeOut" }}
           className="flex items-center space-x-2"
         >
+          <Link to="/">
           <img
             src="white-logo.png"
             alt="Logo"
             className="w-30 h-12 object-cover"
           />
+          </Link>
+
         </motion.div>
 
-        {/* 🌈 Links */}
         <div className="hidden md:flex items-center space-x-10">
           {["Home", "Apps", "About", "Contact"].map((name) => (
             <Link
               key={name}
               to={`/${name === "Home" ? "" : name.toLowerCase()}`}
-              className={`text-white hover:text-green-400 font-medium transition ${activePage === name.toLowerCase()
+              className={`text-white hover:text-green-400 hover:-translate-y-1 hover:font-bold font-medium transition ${activePage === name.toLowerCase()
                 ? "text-green-400 font-bold"
                 : ""
                 }`}
@@ -98,7 +98,6 @@ const Navbar = ({ activePage }) => {
           ))}
         </div>
 
-        {/* 💚 Button */}
         <motion.div
           whileHover={{ scale: 1.08 }}
           whileTap={{ scale: 0.96 }}
@@ -113,7 +112,6 @@ const Navbar = ({ activePage }) => {
         </motion.div>
       </motion.div>
 
-      {/* 📱 Mobile Dropdown */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
@@ -149,7 +147,6 @@ const Navbar = ({ activePage }) => {
         )}
       </AnimatePresence>
 
-      {/* 💬 Modal */}
       <AnimatePresence>
         {isModalOpen && (
           <motion.div
@@ -166,7 +163,7 @@ const Navbar = ({ activePage }) => {
               transition={{ duration: 0.3, ease: "easeOut" }}
               className="shadow-[0_4px_25px_rgba(0,255,100,0.15)] backdrop-blur-md border border-white/10 p-8 w-[90%] sm:w-[800px] bg-white"
             >
-              <div className="flex items-center text-[12px] mb-10">
+              <div className="flex items-center text-[12px] mb-10 gap-2">
                 <img src="./movingIcon.gif" width={20} />
                 <p>Let’s Get Started</p>
               </div>
@@ -204,7 +201,7 @@ const Navbar = ({ activePage }) => {
 
                 <button
                   type="submit"
-                  className="w-full bg-green-600 hover:bg-green-700 py-2 rounded-lg font-semibold transition"
+                  className="bg-gradient-to-l text-white font-bold from-green-600 to-green-950 hover:bg-black py-2 rounded-full transition px-16"
                 >
                   Submit
                 </button>
