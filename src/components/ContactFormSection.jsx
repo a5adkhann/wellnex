@@ -4,21 +4,20 @@ import { motion } from "framer-motion";
 const ContactFormSection = () => {
   return (
     <>
-      <div className="bg-gradient-to-b from-[#0b0d13] via-[#111827] to-[#0b0d13] border-t-2 border-l-2  border-gray-600 flex justify-center items-center p-10 md:p-20">
+      <div className="bg-gradient-to-b from-[#0b0d13] via-[#111827] to-[#0b0d13] border-t-2 border-l-2  border-gray-600 flex justify-center items-center p-10 md:p-20"
+      >
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="  w-full max-w-3xl p-8 md:p-12"
         >
-          <motion.h2
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-2xl sm:text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#34C759] to-[#f8faf9] mb-4 sm:mb-5 text-center"
-          >
-            Contact Us
-          </motion.h2>
+           <div className="flex flex-col md:flex-row items-center justify-center gap-3 mb-6">
+              <div className="w-12 h-[2px] bg-[#34C759]" />
+              <h2 className="text-3xl sm:text-4xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#34C759] to-[#FFF]">
+                Contact Us
+              </h2>
+            </div>
           <form className="space-y-6">
             <input
               type="text"
@@ -66,7 +65,7 @@ const ContactFormSection = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="w-full bg-gradient-to-l from-green-600 to-green-950 text-white py-3 rounded-xl font-semibold text-lg transition-all duration-300 shadow-md"
+              className="w-full bg-gradient-to-l from-green-600 to-green-950 text-white py-3 rounded-full font-semibold text-sm transition-all duration-300 shadow-md"
             >
               Send Message
             </motion.button>

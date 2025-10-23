@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "remixicon/fonts/remixicon.css";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
@@ -14,6 +14,27 @@ import StickyIcon from "./components/StickyIcon";
 import Pill from "./components/Pill";
 
 const App = () => {
+
+  useEffect(() => {
+      const titles = [
+        "Wellnex — Empowering Wellness",
+        "Explore Our Vision 🌿",
+        "Experience Innovation ⚡",
+        "Join the Future with Wellnex 🚀",
+      ];
+
+      let index = 0;
+      document.title = titles[index];
+
+      const interval = setInterval(() => {
+        index = (index + 1) % titles.length;
+        document.title = titles[index];
+      }, 2000);
+
+      return () => clearInterval(interval);
+    }, [])
+
+
   return (
     <div>
       <ParallaxProvider>

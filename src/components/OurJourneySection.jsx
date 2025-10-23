@@ -24,14 +24,12 @@ const OurJourneySection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <motion.h2
-              className="text-3xl sm:text-4xl font-bold mb-6 sm:mb-10 text-white"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              Our Journey
-            </motion.h2>
+            <div className="flex flex-col md:flex-row items-center justify-start gap-3 mb-6">
+              <div className="w-12 h-[2px] bg-[#34C759]" />
+              <h2 className="text-3xl sm:text-4xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#34C759] to-[#FFF]">
+                Our Journey
+              </h2>
+            </div>
             <p className="text-sm sm:text-base leading-relaxed">
               Founded in 2023, Wellnex Systems began as a small vision — to
               merge the power of artificial intelligence with emotional

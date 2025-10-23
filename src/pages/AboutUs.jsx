@@ -5,6 +5,7 @@ import OurJourneySection from "../components/OurJourneySection";
 import CoreValuesSection from "../components/CoreValuesSection";
 import JoinTheWellnessSection from "../components/JoinTheWellnessSection";
 import Loader from "../components/Loader";
+import ProgressBar from "../components/ProgressBar";
 
 const AboutUs = () => {
    const [loading, setLoading] = useState(true);
@@ -25,6 +26,7 @@ const AboutUs = () => {
 
   return (
     <div className="font-[Poppins] text-gray-100 bg-gradient-to-b from-[#0b0d13] via-[#111827] to-[#0b0d13] overflow-hidden">
+      <ProgressBar />
       <AboutHeroSection/>
 
       <MissionAndVisionSection/>
