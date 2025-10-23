@@ -5,26 +5,26 @@ import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
 const Contact = () => {
 
   useEffect(() => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }, []);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
 
   return (
     <div className="font-[Poppins] text-black bg-gradient-to-b from-[#0b0d13] via-[#111827] to-[#0b0d13]">
-   <section className="px-8 md:px-20 pt-28 pb-16 text-left"
-     style={{
-  backgroundImage: `linear-gradient(rgba(0, 60, 0, 0.15), rgba(0, 0, 0, 0.85)), url('line-vector.svg')`,
-  backgroundSize: "cover",
-  backgroundPosition: "center",
-}}
-   >
+      <section className="px-8 md:px-20 pt-28 pb-16 text-left"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0, 60, 0, 0.15), rgba(0, 0, 0, 0.85)), url('line-vector.svg')`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
         <motion.h1
-                  initial={{ opacity: 0, y: 40 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8 }}
-                  className="text-4xl sm:text-5xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#34C759] to-[#f8faf9] mb-4 sm:mb-5"
-                >
-                  Get in Touch with <br /> Wellnex Systems
-                </motion.h1>
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-4xl sm:text-5xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#34C759] to-[#f8faf9] mb-4 sm:mb-5"
+        >
+          Get in Touch with <br /> Wellnex Systems
+        </motion.h1>
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -74,13 +74,13 @@ const Contact = () => {
             className="  w-full max-w-3xl p-8 md:p-12"
           >
             <motion.h2
-                  initial={{ opacity: 0, y: 40 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8 }}
-                  className="text-2xl sm:text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#34C759] to-[#f8faf9] mb-4 sm:mb-5 text-center"
-                >
-                  Contact Us
-                </motion.h2>
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-2xl sm:text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#34C759] to-[#f8faf9] mb-4 sm:mb-5 text-center"
+            >
+              Contact Us
+            </motion.h2>
             <form className="space-y-6">
               <input
                 type="text"

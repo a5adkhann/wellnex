@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import { Parallax } from "react-scroll-parallax";
 import { FaBrain, FaHeart, FaGlobe } from "react-icons/fa";
 import Hero from "../components/Hero";
-import TimelineSection from "../components/TimelineSection";
 
 const AboutUs = () => {
 
