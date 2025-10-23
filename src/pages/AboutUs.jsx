@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Parallax } from "react-scroll-parallax";
 import { FaBrain, FaHeart, FaGlobe } from "react-icons/fa";
 import Hero from "../components/Hero";
+import TimelineSection from "../components/TimelineSection";
 
 const AboutUs = () => {
 
@@ -12,9 +13,9 @@ const AboutUs = () => {
 
 
   return (
-    <div className="font-[Poppins] text-gray-100 bg-gradient-to-b from-[#0b0d13] via-[#111827] to-[#0b0d13] overflow-hidden">
+    <div className="font-[Poppins] text-gray-100 bg-gradient-to-b pt-10 from-[#0b0d13] via-[#111827] to-[#0b0d13] overflow-hidden ">
       {/* HERO / INTRO */}
-      <section className="relative py-20 sm:py-24 md:py-34 px-4 sm:px-8 md:px-16 lg:px-20 text-left border-b border-[#1b2e1b]"
+      <section className="relative py-20 sm:py-24 md:py-34 px-6 sm:px-12 md:px-20 lg:px-20 text-left border-b border-[#1b2e1b]"
         style={{
   backgroundImage: `linear-gradient(rgba(0, 60, 0, 0.15), rgba(0, 0, 0, 0.85)), url('line-vector.svg')`,
   backgroundSize: "cover",
@@ -42,7 +43,7 @@ const AboutUs = () => {
       </section>
 
       {/* MISSION & VISION */}
-      <section className="grid md:grid-cols-2 gap-8 sm:gap-10 max-w-[100%] mx-auto px-0 sm:px-8 md:px-12 lg:px-20 py-44 sm:py-24"
+      <section className="grid md:grid-cols-2 gap-8 sm:gap-10 max-w-[100%] mx-auto px-5 sm:px-8 md:px-12 lg:px-20 py-24"
           
       >
         <Parallax speed={-5}>
@@ -81,7 +82,7 @@ shadow-[0_4px_25px_rgba(0,255,100,0.15)] backdrop-blur-md border border-white/10
       </section>
 
       {/* OUR STORY */}
-      <section className="bg-[#111827] py-20 sm:py-24 px-4 sm:px-8 md:px-16 lg:px-20"
+      <section className="bg-[#111827] py-20 sm:py-24 px-5 sm:px-8 md:px-16 lg:px-20"
       style={{
   backgroundImage: `linear-gradient(rgba(0, 60, 0, 0.15), rgba(0, 0, 0, 0.85)), url('line-vector.svg')`,
   backgroundSize: "cover",
@@ -127,6 +128,8 @@ shadow-[0_4px_25px_rgba(0,255,100,0.15)] backdrop-blur-md border border-white/10
           </div>
         </div>
       </section>
+
+      {/* <TimelineSection/> */}
 
       {/* CORE VALUES */}
       <section className="py-20 sm:py-24 px-4 sm:px-8 md:px-16 lg:px-20 bg-gradient-to-r from-[#10141c] to-[#0b0d13]">
