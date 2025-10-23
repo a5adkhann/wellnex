@@ -8,17 +8,29 @@ import { Link } from 'react-router-dom';
 
 const Heroo = () => {
   return (
-    <section
-      className="relative min-h-screen text-white bg-center bg-cover overflow-hidden"
-      style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 70, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1920&auto=format&fit=crop')`,
-      }}
-    >
-      <div className="flex items-center justify-center min-h-screen px-5 sm:px-8 md:px-12 lg:px-20 py-10 md:py-0">
+    <section className="relative min-h-screen text-white overflow-hidden">
+      {/* 🎥 Background Video */}
+      <div className="absolute inset-0 w-full h-full overflow-hidden">
+        <video
+          src="hero-bg-video.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover filter hue-rotate-[190deg] saturate-[2.5] brightness-110"
+        ></video>
+
+        {/* Green gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[rgba(0,40,0,0.1)] to-[rgba(0,0,0,0.95)] mix-blend-overlay"></div>
+      </div>
+
+      {/* ✨ Hero Content */}
+      <div className="relative z-10 flex items-center justify-center min-h-screen px-5 sm:px-8 md:px-12 lg:px-20 py-10 md:py-0">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-10 md:gap-16">
+          {/* Left Content */}
           <div className="text-center md:text-left space-y-5 sm:space-y-6">
             <motion.div
-              className="text-2xl sm:text-2xl md:text-6xl  text-[#E6F0FA]/90 font-bold font-inter"
+              className="text-2xl sm:text-2xl md:text-6xl text-[#E6F0FA]/90 font-bold font-inter"
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -60,13 +72,14 @@ const Heroo = () => {
               </Link>
               <Link
                 to="/apps"
-                className="border-1 border-[#D4F4E2] text-[#D4F4E2] px-6 sm:px-8 py-2.5 sm:py-3 rounded-full font-semibold text-sm sm:text-base font-poppins hover:border-green-950 hover:shadow-[0_4px_25px_rgba(0,255,100,0.15)] transition-all duration-200"
+                className="border border-[#D4F4E2] text-[#D4F4E2] px-6 sm:px-8 py-2.5 sm:py-3 rounded-full font-semibold text-sm sm:text-base font-poppins hover:border-green-950 hover:shadow-[0_4px_25px_rgba(0,255,100,0.15)] transition-all duration-200"
               >
                 Explore Our Apps
               </Link>
             </div>
           </div>
 
+          {/* Right Icons */}
           <div className="hidden md:flex justify-center items-center relative">
             <div className="relative flex justify-center items-center w-[260px] sm:w-[300px] md:w-[320px] h-[260px] sm:h-[300px] md:h-[320px]">
               <motion.div
