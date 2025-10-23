@@ -78,9 +78,15 @@ const FutureVision = () => {
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
         >
-          <button className="bg-gradient-to-l from-green-600 to-green-950 text-white px-6 sm:px-8 py-2.5 sm:py-3 text-sm sm:text-base md:text-lg rounded-full shadow-md hover:shadow-lg transition">
-            Get Early Access
-          </button>
+          <motion.div
+                                  transition={{ duration: 0.2, ease: "easeOut" }}
+                                >
+                                  <button
+                                    className="md:flex hidden bg-gradient-to-l from-green-600 to-green-950 text-white font-semibold px-5 py-2 text-md rounded-full transition-all duration-300 shadow-md hover:scale-105"
+                                  >
+                                    Get Early Access
+                                  </button>
+                                </motion.div>
         </motion.div>
       </div>
     </section>

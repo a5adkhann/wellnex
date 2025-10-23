@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 import Heroo from "../components/Heroo";
 import WhyWellnex from "../components/WhyWellnex";
@@ -8,11 +8,24 @@ import FutureVision from "../components/FutureVision";
 import Testimonials from "../components/Testinomials";
 
 import ProgressBar from "../components/ProgressBar";
+import Loader from "../components/Loader";
 
 const Home = () => {
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
+
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
   }, []);
+
+  if (loading) {
+    return <Loader />;
+  }
 
   return (
     <>

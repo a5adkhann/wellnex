@@ -74,13 +74,12 @@ const Navbar = ({ activePage }) => {
           className="flex items-center space-x-2"
         >
           <Link to="/">
-          <img
-            src="white-logo.png"
-            alt="Logo"
-            className="w-30 h-12 object-cover"
-          />
+            <img
+              src="white-logo.png"
+              alt="Logo"
+              className="w-30 h-12 object-cover"
+            />
           </Link>
-
         </motion.div>
 
         <div className="hidden md:flex items-center space-x-10">
@@ -88,10 +87,11 @@ const Navbar = ({ activePage }) => {
             <Link
               key={name}
               to={`/${name === "Home" ? "" : name.toLowerCase()}`}
-              className={`text-white hover:text-green-400 hover:-translate-y-1 hover:font-bold font-medium transition ${activePage === name.toLowerCase()
-                ? "text-green-400 font-bold"
-                : ""
-                }`}
+              className={`text-white hover:text-green-400 hover:-translate-y-1 hover:font-bold font-medium transition ${
+                activePage === name.toLowerCase()
+                  ? "text-green-400 font-bold"
+                  : ""
+              }`}
             >
               {name}
             </Link>
@@ -104,7 +104,7 @@ const Navbar = ({ activePage }) => {
           transition={{ duration: 0.2, ease: "easeOut" }}
         >
           <button
-            onClick={() => setIsModalOpen(true)} // ✅ open modal
+            onClick={() => setIsModalOpen(true)}
             className="md:flex hidden bg-gradient-to-l from-green-600 to-green-950 text-white font-semibold px-5 py-2 text-sm rounded-full transition-all duration-300 shadow-md"
           >
             Speak to an expert
@@ -119,7 +119,7 @@ const Navbar = ({ activePage }) => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.25, ease: "easeOut" }}
-            className="md:hidden absolute top-full left-0 w-full bg-black/50 backdrop-blur-lg border-t border-b border-gray-200 z-10"
+            className="md:hidden absolute top-full left-0 w-full bg-black/50 backdrop-blur-lg border-t border-b border-green-900 z-10"
           >
             <div className="px-4 py-4 space-y-4">
               {["Home", "Apps", "About", "Contact"].map((name) => (
@@ -127,21 +127,31 @@ const Navbar = ({ activePage }) => {
                   key={name}
                   to={`/${name === "Home" ? "" : name.toLowerCase()}`}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className={`block text-white hover:text-black transition ${activePage === name.toLowerCase()
-                    ? "text-black font-bold"
-                    : ""
-                    }`}
+                  className={`block text-white hover:text-black transition ${
+                    activePage === name.toLowerCase()
+                      ? "text-black font-bold"
+                      : ""
+                  }`}
                 >
                   {name}
                 </Link>
               ))}
+              
               <Link
                 to="/contact"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="block bg-green-500 hover:bg-green-600 text-white text-center py-2 rounded-full font-medium"
+                className="block bg-gradient-to-l from-green-600 to-green-950 hover:bg-green-600 text-white text-center py-2 rounded-full font-medium"
               >
                 Join Now
               </Link>
+
+              <Link
+                onClick={() => setIsModalOpen(true)}
+                className="block bg-gradient-to-l from-green-600 to-green-950 hover:bg-green-600 text-white text-center py-2 rounded-full font-medium"
+              >
+                Speak to an Expert
+              </Link>  
+                
             </div>
           </motion.div>
         )}
@@ -180,7 +190,6 @@ const Navbar = ({ activePage }) => {
                   <CircleX className="w-6 h-6" />
                 </button>
               </div>
-
 
               <form className="space-y-4">
                 <input

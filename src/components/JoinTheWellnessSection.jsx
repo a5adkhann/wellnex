@@ -16,9 +16,11 @@ const JoinTheWellnessSection = () => {
           Be part of a global movement towards mindful, intelligent living.
           Together, let’s shape the future of well-being.
         </p>
-        <button className="bg-gradient-to-l from-green-600 to-green-950 text-white px-8 sm:px-10 py-3 sm:py-4 rounded-full font-semibold hover:bg-[#28a745] transition text-sm sm:text-base">
-          Get Involved
-        </button>
+        <div className="flex justify-center">
+          <button className="md:flex hidden bg-gradient-to-l from-green-600 to-green-950 text-white font-semibold px-5 py-2 text-md rounded-full transition-all duration-300 shadow-md hover:scale-105">
+            Get Involved
+          </button>
+        </div>
       </section>
     </>
   );

@@ -108,9 +108,15 @@ const FlagshipApps = () => {
                 ))}
               </ul>
 
-              <button className="bg-gradient-to-l from-green-600 to-green-950 text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-full font-semibold text-sm sm:text-base hover:bg-[#28a745] transition">
-                {app.btnText}
-              </button>
+              <motion.div
+                        transition={{ duration: 0.2, ease: "easeOut" }}
+                      >
+                        <button
+                          className="md:flex hidden bg-gradient-to-l from-green-600 to-green-950 text-white font-semibold px-5 py-2 text-md rounded-full transition-all duration-300 shadow-md hover:scale-105"
+                        >
+                          {app.btnText}
+                        </button>
+                      </motion.div>
             </div>
           </motion.div>
         ))}
