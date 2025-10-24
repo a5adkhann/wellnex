@@ -91,32 +91,15 @@ const OurVision = () => {
               wellbeing, and sustainable habits.
             </motion.p>
 
-            <motion.button
-              className="bg-[#34C759] hover:bg-[#2eb14f] text-black font-semibold px-6 sm:px-8 py-3 rounded-full border-2 border-[#34C759] transition-all duration-300 flex items-center gap-2 mx-auto lg:mx-0 text-sm sm:text-base"
-              whileHover={{
-                scale: 1.05,
-                boxShadow: "0 10px 25px rgba(52, 199, 89, 0.4)",
-              }}
-              whileTap={{ scale: 0.95 }}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5, duration: 0.6 }}
+            <motion.div
+              transition={{ duration: 0.2, ease: "easeOut" }}
             >
-              Learn More
-              <svg
-                className="w-4 h-4 sm:w-5 sm:h-5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
+              <button
+                className="md:flex hidden bg-gradient-to-l from-green-600 to-green-950 text-white font-semibold px-10 py-3 text-md rounded-full transition-all duration-300 shadow-md hover:scale-105"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M17 8l4 4m0 0l-4 4m4-4H3"
-                />
-              </svg>
-            </motion.button>
+                JOIN THE TRIBE
+              </button>
+            </motion.div>
           </motion.div>
         </div>
 

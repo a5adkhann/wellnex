@@ -9,25 +9,26 @@ import { Link } from 'react-router-dom';
 const Heroo = () => {
   return (
     <section className="relative min-h-screen text-white overflow-hidden">
-      {/* 🎥 Background Video */}
       <div className="absolute inset-0 w-full h-full overflow-hidden">
-        <video
-          src="hero-bg-video.mp4"
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover filter hue-rotate-[190deg] saturate-[2.5] brightness-110"
-        ></video>
+        <div
+          className="absolute inset-0 bg-center bg-cover"
+          style={{
+            backgroundImage: `
+        url('hero.jpg')
+      `,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
+        ></div>
 
-        {/* Green gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[rgba(0,40,0,0.1)] to-[rgba(0,0,0,0.95)] mix-blend-overlay"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-[rgba(0,60,0,0.1)] to-[rgba(0,0,0,0.9)] mix-blend-multiply"></div>
       </div>
 
-      {/* ✨ Hero Content */}
+
+
       <div className="relative z-10 flex items-center justify-center min-h-screen px-5 sm:px-8 md:px-12 lg:px-20 py-10 md:py-0">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-10 md:gap-16">
-          {/* Left Content */}
           <div className="text-center md:text-left space-y-5 sm:space-y-6">
             <motion.div
               className="text-2xl sm:text-2xl md:text-6xl text-[#E6F0FA]/90 font-bold font-inter"

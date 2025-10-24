@@ -2,17 +2,39 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { CircleX } from "lucide-react";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+
+const contactSchema = z.object({
+  name: z.string().min(2, "Name is required"),
+  email: z.string().email("Please enter a valid email address"),
+  company: z.string().optional(),
+  message: z.string().min(5, "Message must be at least 5 characters long"),
+});
 
 const Navbar = ({ activePage }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false); // ✅ modal state
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    resolver: zodResolver(contactSchema),
+  });
+
+  const onSubmit = (data) => {
+    console.log("✅ Form Data:", data);
+  };
 
   return (
     <motion.nav
@@ -87,11 +109,10 @@ const Navbar = ({ activePage }) => {
             <Link
               key={name}
               to={`/${name === "Home" ? "" : name.toLowerCase()}`}
-              className={`text-white hover:text-green-400 hover:-translate-y-1 hover:font-bold font-medium transition ${
-                activePage === name.toLowerCase()
-                  ? "text-green-400 font-bold"
-                  : ""
-              }`}
+              className={`text-white hover:text-green-400 hover:-translate-y-1 hover:font-bold font-medium transition ${activePage === name.toLowerCase()
+                ? "text-green-400 font-bold"
+                : ""
+                }`}
             >
               {name}
             </Link>
@@ -127,16 +148,15 @@ const Navbar = ({ activePage }) => {
                   key={name}
                   to={`/${name === "Home" ? "" : name.toLowerCase()}`}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className={`block text-white hover:text-black transition ${
-                    activePage === name.toLowerCase()
-                      ? "text-black font-bold"
-                      : ""
-                  }`}
+                  className={`block text-white hover:text-black transition ${activePage === name.toLowerCase()
+                    ? "text-black font-bold"
+                    : ""
+                    }`}
                 >
                   {name}
                 </Link>
               ))}
-              
+
               <Link
                 to="/contact"
                 onClick={() => setIsMobileMenuOpen(false)}
@@ -150,8 +170,8 @@ const Navbar = ({ activePage }) => {
                 className="block bg-gradient-to-l from-green-600 to-green-950 hover:bg-green-600 text-white text-center py-2 rounded-full font-medium"
               >
                 Speak to an Expert
-              </Link>  
-                
+              </Link>
+
             </div>
           </motion.div>
         )}
@@ -173,40 +193,74 @@ const Navbar = ({ activePage }) => {
               transition={{ duration: 0.3, ease: "easeOut" }}
               className="shadow-[0_4px_25px_rgba(0,255,100,0.15)] backdrop-blur-md border border-white/10 p-8 w-[90%] sm:w-[800px] bg-white"
             >
-              <div className="flex items-center text-[12px] mb-10 gap-2">
-                <img src="./movingIcon.gif" width={20} />
-                <p>Let’s Get Started</p>
-              </div>
-              <div className="modal-header flex justify-between items-center mb-6">
-                <h3 className="text-2xl sm:text-3xl font-bold text-gray-800">
-                  This Could Be the Start of <br className="hidden sm:block" />
-                  Something Incredible!
-                </h3>
+              <div className="flex items-center justify-between text-[12px] mb-10 gap-2">
+                <div className="flex gap-2 items-center">
+                  <img src="./movingIcon.gif" width={20} />
+                  <p>Let’s Get Started</p>
+                </div>
 
-                <button
-                  onClick={() => setIsModalOpen(false)}
-                  className="text-gray-500 hover:text-[#34C759] transition"
-                >
-                  <CircleX className="w-6 h-6" />
-                </button>
+                <div>
+                  <button
+                    onClick={() => setIsModalOpen(false)}
+                    className="text-gray-500 hover:text-[#34C759] transition"
+                  >
+                    <CircleX className="w-6 h-6" />
+                  </button>
+                </div>
               </div>
 
-              <form className="space-y-4">
-                <input
-                  type="text"
-                  placeholder="Your Name"
-                  className="w-full border border-gray-300 px-4 py-2 focus:outline-none"
-                />
-                <input
-                  type="email"
-                  placeholder="Your Email"
-                  className="w-full border border-gray-300 px-4 py-2 focus:outline-none"
-                />
-                <textarea
-                  rows="3"
-                  placeholder="Your Message"
-                  className="w-full border border-gray-300 px-4 py-2 focus:outline-none"
-                ></textarea>
+              <h3 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-10">
+                This Could Be the Start of <br className="hidden sm:block" />
+                Something Incredible!
+              </h3>
+
+              <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+                <div className="form-group grid md:grid-cols-2 grid-cols-1 gap-5">
+                  <div>
+                    <input
+                      type="text"
+                      placeholder="Your Name*"
+                      {...register("name")}
+                      className="w-full border border-gray-300 px-4 py-2 focus:outline-none"
+                    />
+                    {errors.name && (
+                      <p className="text-red-500 text-sm mt-1">{errors.name.message}</p>
+                    )}
+                  </div>
+
+                  <div>
+                    <input
+                      type="email"
+                      placeholder="Your Email*"
+                      {...register("email")}
+                      className="w-full border border-gray-300 px-4 py-2 focus:outline-none"
+                    />
+                    {errors.email && (
+                      <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>
+                    )}
+                  </div>
+                </div>
+
+                <div>
+                  <input
+                    type="text"
+                    placeholder="Company Name (if B2B)"
+                    {...register("company")}
+                    className="w-full border border-gray-300 px-4 py-2 focus:outline-none"
+                  />
+                </div>
+
+                <div>
+                  <textarea
+                    rows="3"
+                    placeholder="Your Message*"
+                    {...register("message")}
+                    className="w-full border border-gray-300 px-4 py-2 focus:outline-none"
+                  ></textarea>
+                  {errors.message && (
+                    <p className="text-red-500 text-sm mt-1">{errors.message.message}</p>
+                  )}
+                </div>
 
                 <button
                   type="submit"

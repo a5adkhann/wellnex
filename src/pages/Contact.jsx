@@ -8,6 +8,7 @@ import Loader from "../components/Loader";
 import ContactDetailsSection from "../components/ContactDetailsSection";
 import WhyConnectSection from "../components/WhyConnectSection";
 import ProgressBar from "../components/ProgressBar";
+import AddressMapSection from "../components/AddressMapSection";
 
 const Contact = () => {
 
@@ -46,6 +47,8 @@ const Contact = () => {
       </section>
 
       <ContactDetailsSection/>
+
+      <AddressMapSection/>
     </div>
   );
 };
