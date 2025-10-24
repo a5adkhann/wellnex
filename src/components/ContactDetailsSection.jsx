@@ -7,9 +7,9 @@ const ContactDetailsSection = () => {
     <>
       <section className="text-center py-20 border-t border-white/10 px-6"
             style={{
-                backgroundImage: `linear-gradient(rgba(0, 60, 0, 0.15), rgba(0, 0, 0, 0.85)), url('line-vector.svg')`,
+                backgroundImage: `url('getInTouch.jpeg')`,
                 backgroundSize: "cover",
-                backgroundPosition: "center",
+                backgroundPosition: "start",
               }}
       >
         <motion.h2

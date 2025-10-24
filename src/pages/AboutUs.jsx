@@ -6,6 +6,7 @@ import CoreValuesSection from "../components/CoreValuesSection";
 import JoinTheWellnessSection from "../components/JoinTheWellnessSection";
 import Loader from "../components/Loader";
 import ProgressBar from "../components/ProgressBar";
+import FAQSection from "../components/FAQSection";
 
 const AboutUs = () => {
    const [loading, setLoading] = useState(true);
@@ -36,6 +37,8 @@ const AboutUs = () => {
       <CoreValuesSection/>
 
       <JoinTheWellnessSection/>
+
+      <FAQSection/>
     </div>
   );
 };

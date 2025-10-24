@@ -18,10 +18,7 @@ const App = () => {
   useEffect(() => {
       const titles = [
         "Wellnex - Empowering Wellness",
-        "Wellnex - Your Partner in Modern Wellbeing",
-        "Wellnex - Inspiring Health, Empowering Growth",
-        "Wellnex - Where Science Meets Self-Care 🚀",
-        "Wellnex - Building a Healthier Tomorrow"
+        "1 new message",
       ];
 
       let index = 0;

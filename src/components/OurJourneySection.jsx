@@ -12,7 +12,7 @@ const OurJourneySection = () => {
         backgroundPosition: "center",
       }}
     >
-      <div className="flex items-center justify-center sm:justify-start text-[11px] sm:text-sm md:text-base gap-2 mb-8 sm:mb-10 text-gray-300">
+      <div className="flex items-center justify-center sm:justify-start text-[11px] sm:text-sm md:text-base gap-2 text-gray-300">
         <img
           src="./movingIcon.gif"
           width={22}
@@ -20,12 +20,10 @@ const OurJourneySection = () => {
           className="object-contain"
           alt="moving icon"
         />
-        <p>Fuelled by dreams, driven by results</p>
+        <p className="text-xs">Fuelled by dreams, driven by results</p>
       </div>
 
-      {/* Main Content Grid */}
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
-        {/* Left Text Section */}
         <motion.div
           className="space-y-5 sm:space-y-7 text-gray-300 px-2 sm:px-0"
           initial={{ opacity: 0, x: 50 }}
@@ -56,7 +54,6 @@ const OurJourneySection = () => {
           </p>
         </motion.div>
 
-        {/* Right Hero Section */}
         <div className="flex justify-center md:justify-end w-full">
           <div className="w-[85%] sm:w-[70%] md:w-[90%] lg:w-[80%] max-w-md">
             <Hero />

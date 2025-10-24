@@ -9,6 +9,7 @@ import Testimonials from "../components/Testinomials";
 
 import ProgressBar from "../components/ProgressBar";
 import Loader from "../components/Loader";
+import FAQSection from "../components/FAQSection";
 
 const Home = () => {
   const [loading, setLoading] = useState(true);
@@ -43,6 +44,7 @@ const Home = () => {
       </div>
 
       <FlagshipApps />
+      <FAQSection/>
       <FutureVision />
       <Testimonials />
     </>
