@@ -46,7 +46,6 @@ const Home = () => {
 
       <FlagshipApps />
       <FAQSection/>
-      <ScrollStackSection/>
       <FutureVision />
       <Testimonials />
     </>
