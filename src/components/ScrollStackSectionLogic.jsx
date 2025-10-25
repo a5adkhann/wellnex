@@ -3,7 +3,13 @@ import Lenis from 'lenis';
 import '../scrollStack.css';
 
 export const ScrollStackItem = ({ children, itemClassName = '' }) => (
-  <div className={`scroll-stack-card ${itemClassName}`.trim()}>{children}</div>
+  <div
+  style={{
+          backgroundImage: `linear-gradient(rgba(0, 60, 0, 0.15), rgba(0, 0, 0, 0.85)), url('line-vector.svg')`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+  className={`scroll-stack-card ${itemClassName}`.trim()}>{children}</div>
 );
 
 const ScrollStackSectionLogic = ({
